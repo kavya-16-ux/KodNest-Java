@@ -24,30 +24,29 @@ class StudentUtility {
 public class P02 {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        StudentUtility utility = new StudentUtility();
+        try (Scanner scanner = new Scanner(System.in)) {
+            StudentUtility utility = new StudentUtility();
 
-        int id = scanner.nextInt();
-        scanner.nextLine();
+            int id = scanner.nextInt();
+            scanner.nextLine();
 
-        String name = scanner.nextLine();
-        int javaScore = scanner.nextInt();
-        int sqlScore = scanner.nextInt();
+            String name = scanner.nextLine();
+            int javaScore = scanner.nextInt();
+            int sqlScore = scanner.nextInt();
 
-        utility.showReportTitle();
-        utility.displayStudent(id, name);
+            utility.showReportTitle();
+            utility.displayStudent(id, name);
 
-        double res = utility.getPassingPercentage();
-        double avg = utility.calculatePercentage(javaScore, sqlScore);
+            double res = utility.getPassingPercentage();
+            double avg = utility.calculatePercentage(javaScore, sqlScore);
 
-        System.out.println("Percentage: " + avg);
+            System.out.println("Percentage: " + avg);
 
-        if (avg >= res) {
-            System.out.println("Result: PASS");
-        } else {
-            System.out.println("Result: NEEDS IMPROVEMENT");
+            if (avg >= res) {
+                System.out.println("Result: PASS");
+            } else {
+                System.out.println("Result: NEEDS IMPROVEMENT");
+            }
         }
-
-        scanner.close();
     }
 }
