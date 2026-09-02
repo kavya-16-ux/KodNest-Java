@@ -20,6 +20,7 @@ public class P05 {
         for (int i = a.length - 1; i > 0; i--) {
             a[i] = a[i - 1];
         }
+        // or you can use this for loop
         //for(int i =a.length-2;i>0;i++){
         // a[i + 1] = a[i];
         //}

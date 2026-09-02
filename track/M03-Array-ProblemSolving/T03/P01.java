@@ -19,7 +19,7 @@ public class P01 {
         System.out.println("Enter the last elements of array b");
         b[b.length - 1] = scan.nextInt();
         for (int i = 0; i < b.length; i++) {
-            System.err.println(b[i]);
+            System.out.println(b[i]);
         }
 
     }

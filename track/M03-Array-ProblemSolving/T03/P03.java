@@ -15,7 +15,7 @@ public class P03 {
         System.out.println("Enter the index that you want to remove the elements");
         int index = scan.nextInt();
         int[] b = new int[a.length - 1];
-        for (int i = 0; i < b.length; i++) {
+        for (int i = 0; i < a.length; i++) {
             if (i < index) {
                 b[i] = a[i];
             } else {
