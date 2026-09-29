@@ -6,9 +6,7 @@ class book {
     private int pageNumber;
 
     public void setData(int x) {
-        if (x > 0) {
             pageNumber = x;
-        }
     }
 
     public void getData() {
