@@ -1,0 +1,43 @@
+class Parent{
+    void disp1(){
+        System.out.println("Parent");
+    }
+}
+class Child1 extends Parent{
+    @Overide
+    void disp1(){
+        System.out.println("Child1");
+    }
+    void displ2(){
+        System.out.println("Child specialized class of child1")
+    }
+
+}
+
+class Child2 extends Parent{
+    @Overide
+    void disp1(){
+        System.out.println("Child2");
+    }
+    void displ3(){
+        System.out.println("Child specialized class of child2")
+    }
+}
+
+public class P05_Downcasting{
+    public static void main(String[] args){
+        Parent jd= new Child1();
+        accessMethod(jd);
+        Parent pd = new Child2();
+        accessMethod(pd);
+    }
+    public static void accessMethod(Parent p){
+        p.disp1();// access the inherited methods using parent child refernece
+        if(p instanceof Child1){ // because child1 has diff method 
+        ((Child1)(p)).disp2(); //access the child specialized class by cnvt to parent--downcasting
+        }
+        else{ // if child2 has diff method
+        ((Child2)(p)).disp3(); //access the child specialized class by cnvt to parent--downcasting
+        }
+    }
+}

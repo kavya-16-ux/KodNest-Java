@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+
+class Display {
+
+    // Create show(int)
+    public void show(int value) {
+        System.out.println("Number " + value);
+    }
+
+    // Create show(String)
+    public void show(String word) {
+        System.out.println("Text " + word);
+    }
+}
+
+public class P14_method_overloading {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read both values and call both methods
+        int value = scanner.nextInt();
+        String word = scanner.next();
+        Display d = new Display();
+        d.show(value);
+        d.show(word);
+    }
+}
